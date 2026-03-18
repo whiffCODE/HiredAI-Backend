@@ -7,6 +7,7 @@ import aiRoutes from "./routes/ai.routes.js";
 import parserRoutes from "./routes/parser.routes.js";
 import pdfRoutes from "./routes/pdf.routes.js";
 import paymentRoutes from "./routes/payment.routes.js";
+import previewRoutes from "./src/routes/preview.routes.js";
 
 
 import { protect } from "./middleware/auth.middleware.js";
@@ -23,6 +24,7 @@ app.use("/api/ai", aiRoutes);
 app.use("/api/parser", parserRoutes);
 app.use("/api/pdf", pdfRoutes);
 app.use("/api/payment", paymentRoutes);
+app.use("/api/preview", previewRoutes);
 
 app.get("/", (req, res) => {
   res.send("Hired.ai Backend Running ⚡");
